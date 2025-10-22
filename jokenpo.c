@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
+int main()
+{
     int escolhaJogador, escolhaComputador;
     srand(time(0));
 
@@ -45,5 +46,19 @@ int main() {
         break;
     }
 
+    if (escolhaComputador == escolhaJogador)
+    {
+        printf("### Jogo empatou ###\n");
+    }
+    else if ((escolhaJogador == 1) && (escolhaComputador == 3) ||
+             (escolhaJogador == 2) && (escolhaComputador == 1) ||
+             (escolhaJogador == 3) && (escolhaComputador == 2))
+    {
+        printf("### Parabéns, você ganhou ###\n");
+    }
+    else
+    {
+        printf("### Você perdeu ###\n");
+    }
     return 0;
-}    
+}
